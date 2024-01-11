@@ -12,4 +12,48 @@
         }
 
         main {
-            padding:
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #about, #calendly {
+            width: 45%;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
+
+            #about, #calendly {
+                width: 100%;
+            }
+        }
+
+        /* Add more styling as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Coaching Services</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my coaching services. Here's some information about me...</p>
+            <!-- Add more about yourself here -->
+        </section>
+
+        <section id="calendly">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/hiyacoachchris/30min" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </section>
+    </main>
+    <footer>
+        <p>Contact Information</p>
+    </footer>
+</body>
+</html>
