@@ -1,19 +1,67 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #a7c7e7; /* Pastel blue background */
+    color: #333333; /* Soft black for text */
+}
+
+header {
+    background: #b19cd9; /* Pastel purple header */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 main {
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 #about, #calendly {
     width: 45%;
+    background-color: white; /* White background for content areas */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Add more styling as needed */
+h2 {
+    color: #333;
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+footer {
+    background: #b19cd9; /* Pastel purple footer */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about, #calendly {
+        width: 80%;
+    }
+}
