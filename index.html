@@ -11,10 +11,9 @@
             box-sizing: border-box;
             background-color: #f0eae3; /* Soft background color */
             color: #333; /* Text color */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            transition: background-image 1s ease-in-out;
+            background-image: url('1.png'); /* Set the first image as the background */
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat; /* Prevent background image repetition */
         }
 
         .header-footer {
@@ -30,7 +29,7 @@
 
         section {
             width: 45%;
-            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            background-color: white; /* White background for sections */
             padding: 20px;
             margin: 10px;
             border-radius: 8px;
@@ -56,33 +55,6 @@
             line-height: 1.6; /* Adjust line height as needed */
         }
 
-        .dark-orange-text {
-            color: #ff6600; /* Dark orange color */
-            font-style: italic; /* Italics */
-        }
-
-        .image-carousel {
-            display: none; /* Hide the image carousel section */
-        }
-
-        @keyframes rotateImages {
-            0%, 100% {
-                background-image: url('1.png');
-            }
-            20% {
-                background-image: url('2.png');
-            }
-            40% {
-                background-image: url('3.png');
-            }
-            60% {
-                background-image: url('4.png');
-            }
-            80% {
-                background-image: url('5.png');
-            }
-        }
-
         @media (max-width: 800px) {
             main {
                 flex-direction: column;
@@ -100,11 +72,7 @@
 
     <main>
         <section id="about">
-            <h2>Grab time with Chris</h2>
-            <p class="dark-brown-text italicized-text">Ready to schedule a session? Ignore the below and hit the scheduler on the right. Googlers, please use Meet. Everyone else, Zoom.</p>
-            <p class="blue-text">Hi, I'm Chris. I'm in the final months of <a href="https://www.linkedin.com/in/chris-busselle-366796157/" target="_blank">a wonderful 15 years at Google</a>, and the company has given me a gracious final gift: time. I'm going to use that time doing what I love best about my job, coaching and advising.</p>
-            <p class="blue-text">For most of my 25-year career, I've aspired to be some form of coach -- a helpful sounding board to colleagues inside and outside of Google. On my best days, I was there for anyone and everyone who wanted to riff about what they were excited about or drained by.</p>
-            <p class="blue-text">So, what do you want to talk about? This is free, no catches, no requests that you leave me a Yelp review. You'll be doing me a favor, in fact -- making sure my best days at Google continue on the outside.</p>
+            <!-- Your content here -->
         </section>
 
         <section id="calendly">
@@ -116,22 +84,5 @@
     </main>
 
     <div class="header-footer"></div> <!-- Green area at the bottom -->
-
-    <section class="image-carousel">
-        <div class="carousel-container"></div>
-    </section>
-
-    <script>
-        const images = ['1.png', '2.png', '3.png', '4.png', '5.png'];
-
-        let currentImageIndex = 0;
-
-        function rotateBackgroundImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            document.body.style.backgroundImage = `url(${images[currentImageIndex]})`;
-        }
-
-        setInterval(rotateBackgroundImage, 10000); // Change image every 10 seconds
-    </script>
 </body>
 </html>
