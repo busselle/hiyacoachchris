@@ -99,24 +99,22 @@ footer {
     height: auto;
 }
 
-@keyframes rotate {
-    0%, 16.66% {
-        transform: translateX(0%);
+
+@keyframes rotateImages {
+    0%, 100% {
+        background-image: url('5.png'); /* Initial and final image is 5.png */
     }
-    16.67%, 33.33% {
-        transform: translateX(-100%);
+    20% {
+        background-image: url('1.png'); /* Change to 1.png after 20% of animation */
     }
-    33.34%, 49.99% {
-        transform: translateX(-200%);
+    40% {
+        background-image: url('2.png'); /* Change to 2.png after 40% of animation */
     }
-    50%, 66.66% {
-        transform: translateX(-300%);
+    60% {
+        background-image: url('3.png'); /* Change to 3.png after 60% of animation */
     }
-    66.67%, 83.33% {
-        transform: translateX(-400%);
-    }
-    83.34%, 100% {
-        transform: translateX(-500%);
+    80% {
+        background-image: url('4.png'); /* Change to 4.png after 80% of animation */
     }
 }
 
@@ -132,3 +130,15 @@ footer {
 #about {
     background: white !important; /* Set the background color to white */
 }
+
+
+/* Add this to your existing CSS */
+.image-background {
+    background-image: url('5.png'); /* Set the background image here */
+    background-size: cover; /* Adjust the background size as needed */
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity for the overlay */
+    position: relative;
+    z-index: -1; /* Place the overlay behind the content */
+}
+
