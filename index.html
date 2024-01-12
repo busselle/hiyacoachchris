@@ -32,20 +32,21 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Background image and overlay */
-        section::before {
-            content: "";
-            background-image: url('1.png'); /* Set the background image here */
-            background-size: cover; /* Adjust the background size as needed */
-            background-position: center;
-            opacity: 0.5; /* Adjust the opacity for the overlay */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1; /* Place the overlay behind the content */
-        }
+
+        /* Background image and overlay for section with id="calendly" only */
+#calendly::before {
+    content: "";
+    background-image: url('1.png'); /* Set the background image here */
+    background-size: cover; /* Adjust the background size as needed */
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity for the overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Place the overlay behind the content */
+}
 
         h2 {
             font-weight: 600;
