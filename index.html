@@ -11,9 +11,6 @@
             box-sizing: border-box;
             background-color: #f0eae3; /* Soft background color */
             color: #333; /* Text color */
-            background-image: url('1.png'); /* Set the first image as the background */
-            background-size: cover; /* Adjust the background size as needed */
-            background-repeat: no-repeat; /* Prevent background image repetition */
         }
 
         .header-footer {
@@ -29,11 +26,25 @@
 
         section {
             width: 45%;
-            background-color: white; /* White background for sections */
-            padding: 20px;
+            position: relative; /* Add relative positioning to create stacking context */
             margin: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Background image and overlay */
+        section::before {
+            content: "";
+            background-image: url('1.png'); /* Set the background image here */
+            background-size: cover; /* Adjust the background size as needed */
+            background-position: center;
+            opacity: 0.5; /* Adjust the opacity for the overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Place the overlay behind the content */
         }
 
         h2 {
@@ -43,6 +54,9 @@
         p {
             font-weight: 300;
             line-height: 1.6;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for text */
+            padding: 20px;
+            border-radius: 8px;
         }
 
         .highlight {
