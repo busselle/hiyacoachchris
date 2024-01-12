@@ -11,6 +11,9 @@
             box-sizing: border-box;
             background-color: #f0eae3; /* Soft background color */
             color: #333; /* Text color */
+            background-image: url('1.png'); /* Set the first image as the background */
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat; /* Prevent background image repetition */
         }
 
         .header-footer {
@@ -69,36 +72,6 @@
 
         .calendly-font {
             font-family: 'Helvetica Neue', sans-serif; /* Use Calendly's font family */
-        }
-
-        /* Image carousel container */
-        .carousel-container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background-position: center;
-            animation: rotateImages 5s infinite linear; /* Rotate images every 5 seconds */
-        }
-
-        @keyframes rotateImages {
-            0%, 100% {
-                background-image: url('5.png'); /* Initial and final image is 5.png */
-            }
-            20% {
-                background-image: url('1.png'); /* Change to 1.png after 20% of animation */
-            }
-            40% {
-                background-image: url('2.png'); /* Change to 2.png after 40% of animation */
-            }
-            60% {
-                background-image: url('3.png'); /* Change to 3.png after 60% of animation */
-            }
-            80% {
-                background-image: url('4.png'); /* Change to 4.png after 80% of animation */
-            }
         }
     </style>
 </head>
