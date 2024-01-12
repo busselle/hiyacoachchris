@@ -80,3 +80,43 @@ footer {
         width: 80%;
     }
 }
+
+/* Add this to your existing CSS */
+
+#image-carousel {
+    width: 45%;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    animation: rotate 60s linear infinite;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes rotate {
+    0%, 16.66% {
+        transform: translateX(0%);
+    }
+    16.67%, 33.33% {
+        transform: translateX(-100%);
+    }
+    33.34%, 49.99% {
+        transform: translateX(-200%);
+    }
+    50%, 66.66% {
+        transform: translateX(-300%);
+    }
+    66.67%, 83.33% {
+        transform: translateX(-400%);
+    }
+    83.34%, 100% {
+        transform: translateX(-500%);
+    }
+}
+
