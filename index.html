@@ -62,14 +62,16 @@
 
         .carousel-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
         }
 
         .carousel-container img {
             max-width: 100%;
             height: auto;
             margin: 5px;
+            border-radius: 12px; /* Rounded edges */
+            border: 2px solid #336699; /* Darker pastel blue frame */
         }
 
         @media (max-width: 800px) {
