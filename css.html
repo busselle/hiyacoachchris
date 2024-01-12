@@ -1,19 +1,79 @@
-/* Existing styles remain unchanged */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #a7c7e7; /* Pastel blue background */
+    color: #333333; /* Soft black for text */
+}
+
+header {
+    background: #b19cd9; /* Pastel purple header */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.highlight {
+    color: #336699; /* Darker pastel blue color */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#about, #calendly {
+    width: 45%;
+    background-color: white; /* White background for content areas */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
 h2 {
     color: #333;
     font-size: 1.8em;
-    padding-left: 20px;  /* Align with paragraphs */
+    padding-left: 20px; /* Align with paragraphs */
     padding-right: 20px; /* Align with paragraphs */
 }
 
 #about p {
     font-weight: 300;
     line-height: 1.6;
+    margin-bottom: 10px; /* Reduced space between paragraphs */
+    padding: 10px; /* Reduced padding inside each paragraph */
     background-color: #FFFFFF; /* Solid white background */
-    padding: 10px; /* Reduced padding */
-    margin-bottom: 10px; /* Reduced margin */
     border-radius: 8px;
 }
 
-/* Rest of your existing styles remain unchanged */
+footer {
+    background: #b19cd9; /* Pastel purple footer */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about, #calendly {
+        width: 80%;
+    }
+}
+
+/* Rest of your existing styles */
