@@ -46,10 +46,30 @@
             color: #6fa8dc; /* Pastel blue color */
         }
 
+        .dark-orange-text {
+            color: #FFA500; /* Dark orange color */
+        }
+
+        .italicized-text {
+            font-style: italic; /* Italicize the text */
+        }
+
         .blue-text {
             color: #336699; /* Darker pastel blue color for improved readability */
             font-size: 18px; /* Adjust font size as needed */
             line-height: 1.6; /* Adjust line height as needed */
+        }
+
+        .carousel-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .carousel-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 5px;
         }
 
         @media (max-width: 800px) {
@@ -82,17 +102,17 @@
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             <!-- Calendly inline widget end -->
         </section>
-        <section id="image-carousel">
-    <div class="carousel-container">
-        <img src="1.png" alt="Image 1">
-        <img src="2.png" alt="Image 2">
-        <img src="3.png" alt="Image 3">
-        <img src="4.png" alt="Image 4">
-        <img src="5.png" alt="Image 5">
-        <img src="6.png" alt="Image 6">
-    </div>
-</section>
 
+        <section id="image-carousel">
+            <div class="carousel-container">
+                <img src="1.png" alt="Image 1">
+                <img src="2.png" alt="Image 2">
+                <img src="3.png" alt="Image 3">
+                <img src="4.png" alt="Image 4">
+                <img src="5.png" alt="Image 5">
+                <img src="6.png" alt="Image 6">
+            </div>
+        </section>
     </main>
 
     <div class="header-footer"></div> <!-- Green area at the bottom -->
