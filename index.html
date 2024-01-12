@@ -11,6 +11,10 @@
             box-sizing: border-box;
             background-color: #f0eae3; /* Soft background color */
             color: #333; /* Text color */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
         }
 
         .header-footer {
@@ -26,7 +30,7 @@
 
         section {
             width: 45%;
-            background-color: white; /* White background for sections */
+            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
             padding: 20px;
             margin: 10px;
             border-radius: 8px;
@@ -58,33 +62,25 @@
         }
 
         .image-carousel {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-carousel img {
-            max-width: 200px; /* Adjust the maximum width of images */
-            border-radius: 8px; /* Rounded edges */
-            margin: 5px; /* Margin between images */
-            border: 2px solid #333; /* Border around images */
+            display: none; /* Hide the image carousel section */
         }
 
         @keyframes rotateImages {
-            0% {
-                transform: rotate(0deg);
+            0%, 100% {
+                background-image: url('1.png');
             }
-            100% {
-                transform: rotate(360deg);
+            20% {
+                background-image: url('2.png');
             }
-        }
-
-        .carousel-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            animation: rotateImages 10s linear infinite; /* Rotate images every 10 seconds */
+            40% {
+                background-image: url('3.png');
+            }
+            60% {
+                background-image: url('4.png');
+            }
+            80% {
+                background-image: url('5.png');
+            }
         }
 
         @media (max-width: 800px) {
@@ -122,14 +118,20 @@
     <div class="header-footer"></div> <!-- Green area at the bottom -->
 
     <section class="image-carousel">
-        <div class="carousel-container">
-            <img src="1.png" alt="Image 1">
-            <img src="2.png" alt="Image 2">
-            <img src="3.png" alt="Image 3">
-            <img src="4.png" alt="Image 4">
-            <img src="5.png" alt="Image 5">
-            <img src="6.png" alt="Image 6">
-        </div>
+        <div class="carousel-container"></div>
     </section>
+
+    <script>
+        const images = ['1.png', '2.png', '3.png', '4.png', '5.png'];
+
+        let currentImageIndex = 0;
+
+        function rotateBackgroundImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.body.style.backgroundImage = `url(${images[currentImageIndex]})`;
+        }
+
+        setInterval(rotateBackgroundImage, 10000); // Change image every 10 seconds
+    </script>
 </body>
 </html>
