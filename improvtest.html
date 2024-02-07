@@ -1,96 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversation</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversation Transcript</title>
+<style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f0f0f0;
+        color: #333;
     }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .conversation {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
     .message {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-
-    .user {
-      color: #007bff;
+    .speaker {
+        font-weight: bold;
+        color: #007BFF;
     }
-
-    .gpt {
-      color: #28a745;
+    .content {
+        margin-top: 5px;
+        line-height: 1.5;
     }
-  </style>
+</style>
 </head>
 <body>
-
-<div class="container">
-  <div class="message user">
-    <strong>User:</strong>
-    Hi Gipity - my shared gpt links are not working. Can you tell me what's wrong?
-  </div>
-
-  <div class="message gpt">
-    <strong>GPT:</strong>
-    I'd be happy to help you troubleshoot the issue with your shared GPT links. Could you provide me with more details about the problem you're encountering?<br><br>
-    For example:<br>
-    - Are you receiving any error messages when trying to access the shared links?<br>
-    - Are these links you've generated using the OpenAI API or another platform?<br>
-    - Have you checked if the links are still valid and haven't expired?<br>
-    - Is this issue happening consistently, or is it sporadic?<br>
-    - Have you tried accessing the links from different devices or browsers to see if the problem persists?<br>
-    - Have you made any recent changes to your account or settings that might affect the sharing functionality?<br>
-    - Any additional information you can provide will be helpful in diagnosing the problem and finding a solution.
-  </div>
-
-  <div class="message user">
-    <strong>User:</strong>
-    Can you put our entire conversation so far into a nicely formatted table?
-  </div>
-
-  <div class="message gpt">
-    <strong>GPT:</strong>
-    Sure, here's our conversation formatted into a table:<br><br>
-    <table>
-      <tr>
-        <th>User</th>
-        <th>GPT</th>
-      </tr>
-      <tr>
-        <td>Hi Gipity - my shared gpt links are not working. Can you tell me what's wrong?</td>
-        <td>I'd be happy to help you troubleshoot the issue with your shared GPT links. Could you provide me with more details about the problem you're encountering? For example: Are you receiving any error messages when trying to access the shared links? Are these links you've generated using the OpenAI API or another platform? Have you checked if the links are still valid and haven't expired? Is this issue happening consistently, or is it sporadic? Have you tried accessing the links from different devices or browsers to see if the problem persists? Have you made any recent changes to your account or settings that might affect the sharing functionality? Any additional information you can provide will be helpful in diagnosing the problem and finding a solution.</td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="message user">
-    <strong>User:</strong>
-    Can you export our conversation into a pdf file for me?
-  </div>
-
-  <div class="message gpt">
-    <strong>GPT:</strong>
-    As an AI text model, I can't directly export files, including PDFs. However, you can copy our conversation and paste it into a word processor or text editor such as Microsoft Word or Google Docs. From there, you can format it as needed and save/export it as a PDF file. If you encounter any issues or need further assistance with formatting, feel free to ask!
-  </div>
-
-  <div class="message user">
-    <strong>User:</strong>
-    Copying and pasting into word doesn't work because of all the web formatting. Can you give me a raw text of the entire conversation that makes it easier to copy & paste?
-  </div>
+<div class="conversation">
+    <div class="message">
+        <div class="speaker">User:</div>
+        <div class="content">I want to spend 30 minutes working through an idea and get to enough detail on the idea that it could be handed to someone to execute. Sound good?</div>
+    </div>
+    <div class="message">
+        <div class="speaker">Assistant:</div>
+        <div class="content">Absolutely, that sounds like a great plan! Let's get started. What's the idea you'd like to work through?</div>
+    </div>
+    <div class="message">
+        <div class="speaker">User:</div>
+        <div class="content">Context: For the past year I've been teaching adults about AI: what it is, what the terms mean, how to use it, the different types of AI they've heard about, etc. One of the techniques I've found best is something I call "AI Improv". First I'm going to tell you what AI Improv is. Then I'm going to tell you some insights to help explain why it works well. Works for you?</div>
+    </div>
+    <div class="message">
+        <div class="speaker">Assistant:</div>
+        <div class="content">That sounds fantastic and very intriguing! I'm eager to learn more about "AI Improv" and the insights behind its effectiveness. Please go ahead and share the details.</div>
+    </div>
+    <div class="message">
+        <div class="speaker">User:</div>
+        <div class="content">I'll give you 3 settings where I've done AI Improv. No engagement needed until I'm done.</div>
+    </div>
+    <div class="message">
+        <div class="speaker">Assistant:</div>
+        <div class="content">Understood, I'll wait for you to share all the details. Please go ahead when you're ready.</div>
+    </div>
 </div>
-
 </body>
 </html>
